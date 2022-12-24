@@ -1,0 +1,356 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ededed;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+h1{ font-size: 50px; }
+h2{ font-size: 40px; }
+h3{ font-size: 25px; }
+p{ font-size: 20px; }
+ul{ list-style: none; }
+li{ font-size: 20px; }
+a{ text-decoration: none;
+    font-size: 18px;
+    color: #ededed;}
+.logo { font-size: 30px;}
+
+.spandf{
+    color: #FF7300;
+}
+
+button{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 7px rgb(23, 23, 23);
+    color: black;
+    background-color: #ededed;
+}
+
+button:hover{
+    background-color: #FF7300;
+}
+
+header{
+    background-color: #8E8E8E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+nav a{
+    font-weight: 545;
+    padding-right: 30px;
+}
+nav a:hover{
+    color: #FF7300;
+}
+
+.logo h2{
+    padding-left: 50px;
+    font-size: 33px;
+}
+
+.logo h2:hover{
+    transition: .3s;
+    transform: scale(1.1);
+}
+
+/* section 1 */
+#banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 80vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.501),
+        rgba(0, 0, 0, 0.467)
+    )
+    ,url("./imagenes/mat.header.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#banner h1{
+    color: #ededed;
+}
+
+
+/* section 2 */
+#sobredf .container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#sobredf .texto{
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#sobredf h2{
+    margin-top: 0px;
+}
+
+#sobredf{
+    padding: 150px 70px;
+}
+
+#sobredf .manomat{
+    background-image: url("./imagenes/manomat.JPG");
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center center;
+    height: 420px;
+    width: 520px;
+}
+
+
+/* section 3: prod */
+#prod{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    background-color: #626567;
+}
+
+.productos{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 50px;
+}
+
+.productos .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.productos .front{
+    transform: perspective(600px) rotate(0deg);
+    box-shadow: 0 5px 10px black;
+}
+
+.productos .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.productos .front h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #ededed;
+    background: rgba(0, 0, 0,.4);
+    text-align: center;
+}
+
+.productos .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: #8E8E8E;
+    padding: 15p;
+    color: #ededed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px black;
+}
+ 
+.productos .back .linkprod{
+    border-top: solid 1px #ededed;
+    height: 50px;
+    line-height: 50px;
+}
+
+.productos .back .linkprod a{
+    color: #FF7300;
+}
+
+.productos .back h3{
+    color: #000000;
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.productos .back p{
+    color: #ededed;
+    letter-spacing: 1px;
+}
+
+.productos:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.productos:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/* section 4 */
+#servicios .container{
+    text-align: center;
+    padding: 120px 10px;
+}
+
+#servicios li{
+    margin: 16px 0px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+
+/* Footer */
+.footer{
+    background-color: #8E8E8E;
+    height: auto;
+    padding-top: 30px;
+}
+
+.footer_links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer h3{
+    text-align: center;
+    font-size: 30px;
+}
+
+.footer h3:hover{
+    transition: .3s;
+    transform: scale(1.1);
+}
+
+
+
+.footer .footer_links a{
+    flex-direction: column;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 35px;
+}
+
+.socials li{
+    margin: 0 30px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: #ededed;
+}
+
+.socials a i{
+    font-size: 40px;
+}
+
+
+/* formulario contactos */
+.hola{
+    background: url("./imagenes/mat.header.JPG");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contenedor{
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.contenedor .form .form-header .form-title{
+    font-weight: normal;
+    color: #dedede;
+    text-align: center;
+    padding: 14px 0;
+}
+
+.contenedor .form{
+    background: rgba(0, 0, 0,.6);
+    width: 90%;
+    max-width: 650px;
+    margin: auto;
+    padding: 5px 35px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 3px;
+}
+
+.contenedor .form .form-label{
+    display: block;
+    color: #ededed;
+    font-size: 16px;
+    position: relative;
+}
+
+.contenedor .form .form-input, .form-textarea{
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ededed;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    font-size: 14px;
+}
+
+.contenedor .form .form-textarea{
+    resize: vertical;
+    max-height: 150px;
+    min-height: 50px;
+}
+
+.contenedor .form .btn-submit{
+    width: 100%;
+    outline: none;
+    background: #FF7300;
+    font-size: 16px;
+    border: none;
+    color: #ededed;
+    padding: 15px 0;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.contenedor .form .btn-submit:hover{
+    background: #ff943d;
+}
