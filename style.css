@@ -1,23 +1,16 @@
 *{
+    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 
 body{
-    background-color: #ededed;
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    background-color: #ededed;
 }
 
-h1{ font-size: 50px; }
-h2{ font-size: 40px; }
-h3{ font-size: 25px; }
-p{ font-size: 20px; }
-ul{ list-style: none; }
-li{ font-size: 20px; }
-a{ text-decoration: none;
-    font-size: 18px;
-    color: #ededed;}
-.logo { font-size: 30px;}
+a{
+    text-decoration: none;
+}
 
 .spandf{
     color: #FF7300;
@@ -29,7 +22,7 @@ button{
     padding: 10px 20px;
     border-radius: 30px;
     border: 1px solid black;
-    box-shadow: 2px 2px 7px rgb(23, 23, 23);
+    box-shadow: 2px 2px 7px rgb(75, 75, 75);
     color: black;
     background-color: #ededed;
 }
@@ -38,36 +31,52 @@ button:hover{
     background-color: #FF7300;
 }
 
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+/* header */
 header{
-    background-color: #8E8E8E;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
+    background-color: #a8a8a8;
 }
 
-.logo{
-    display: flex;
-    align-items: center;
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    font-size: 1.6em;
 }
 
-nav a{
-    font-weight: 545;
-    padding-right: 30px;
-}
-nav a:hover{
-    color: #FF7300;
-}
-
-.logo h2{
-    padding-left: 50px;
-    font-size: 33px;
-}
-
-.logo h2:hover{
+h2:hover{
     transition: .3s;
     transform: scale(1.1);
 }
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 4px 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ededed;
+}
+header a:hover{
+    color: #FF7300;
+}
+
 
 /* section 1 */
 #banner{
@@ -76,11 +85,11 @@ nav a:hover{
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    height: 80vh;
+    height: 90vh;
     background-image: linear-gradient(
         0deg,
-        rgba(0, 0, 0, 0.501),
-        rgba(0, 0, 0, 0.467)
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
     )
     ,url("./imagenes/mat.header.JPG");
     background-repeat: no-repeat;
@@ -89,45 +98,27 @@ nav a:hover{
 }
 
 #banner h1{
+    font-size: 35px;
     color: #ededed;
 }
 
 
 /* section 2 */
 #sobredf .container{
-    display: flex;
-    justify-content: space-evenly;
+    text-align: center;
+    padding: 150px 12px;
 }
 
-#sobredf .texto{
-    width: 50%;
-    max-width: 600px;
-    text-align: initial;
-    padding-left: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#sobredf h1{
+    font-size: 35px;
 }
 
-#sobredf h2{
-    margin-top: 0px;
-}
-
-#sobredf{
-    padding: 150px 70px;
-}
-
-#sobredf .manomat{
-    background-image: url("./imagenes/manomat.JPG");
-    border-radius: 10px;
-    background-size: cover;
-    background-position: center center;
-    height: 420px;
-    width: 520px;
+#sobredf p{
+    font-size: 20px;
 }
 
 
-/* section 3: prod */
+/* section 3 */
 #prod{
     display: flex;
     flex-wrap: wrap;
@@ -219,15 +210,17 @@ nav a:hover{
     transform: perspective(600px) rotateY(360deg);
 }
 
+
 /* section 4 */
 #servicios .container{
     text-align: center;
-    padding: 120px 10px;
+    padding: 200px 12px;
 }
 
 #servicios li{
+    list-style: none;
     margin: 16px 0px;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
 }
 
@@ -246,17 +239,16 @@ nav a:hover{
     flex-direction: column;
     text-align: center;
 }
+
 .footer h3{
     text-align: center;
-    font-size: 30px;
+    font-size: 27px;
 }
 
 .footer h3:hover{
     transition: .3s;
     transform: scale(1.1);
 }
-
-
 
 .footer .footer_links a{
     flex-direction: column;
@@ -354,3 +346,57 @@ nav a:hover{
 .contenedor .form .btn-submit:hover{
     background: #ff943d;
 }
+
+
+/* media quaries */
+@media (min-width:768px){
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #banner h1{
+        font-size: 50px;
+    }
+
+    #sobredf .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #sobredf h1{
+        font-size: 40px;
+        margin: 0;
+    }
+
+    #sobredf .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #sobredf .manomat{
+        background-image: url("./imagenes/manomat.JPG");
+        border-radius: 10px;
+        background-size: cover;
+        background-position: center center;
+        height: 420px;
+        width: 520px;
+    }
+    
+    #servicios li{
+        font-size: 40px;
+    }
+}
+
