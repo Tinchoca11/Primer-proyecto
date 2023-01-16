@@ -227,7 +227,7 @@ header a:hover{
 
 /* Footer */
 .footer{
-    background-color: #8E8E8E;
+    background-color: #a8a8a8;
     height: auto;
     padding-top: 30px;
 }
@@ -349,7 +349,7 @@ header a:hover{
 
 
 /* media quaries */
-@media (min-width:768px){
+@media (min-width:769px){
 
     header .container{
         flex-direction: row;
