@@ -102,6 +102,11 @@ header a:hover{
     color: #ededed;
 }
 
+#banner h1:hover{
+    transition: .3s;
+    transform: scale(1.1);
+    
+}
 
 /* section 2 */
 #sobredf .container{
@@ -179,7 +184,7 @@ header a:hover{
     text-align: center;
     box-shadow: 0 5px 10px black;
 }
- 
+
 .productos .back .linkprod{
     border-top: solid 1px #ededed;
     height: 50px;
