@@ -100,13 +100,25 @@ header a:hover{
 #banner h1{
     font-size: 35px;
     color: #ededed;
+    animation: pulse 1.5s infinite;
 }
 
-#banner h1:hover{
-    transition: .3s;
-    transform: scale(1.3);
-    
+
+@keyframes pulse {
+    0%{
+        transform: scale(1);
+    }
+
+    70%{
+        transform: scale(1.3);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+
 }
+
 
 /* section 2 */
 #sobredf .container{
@@ -219,7 +231,7 @@ header a:hover{
 /* section 4 */
 #servicios .container{
     text-align: center;
-    padding: 200px 12px;
+    padding: 140px 12px;
 }
 
 #servicios li{
